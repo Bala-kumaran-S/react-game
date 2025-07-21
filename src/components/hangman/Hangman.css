@@ -1,0 +1,272 @@
+/* Hangman.css – Artistic Dark Glassmorphism Theme */
+
+.hangman-dark {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 42px 0 110px 0;
+  background: rgba(20, 16, 34, 0.97);
+  border-radius: 2.3rem;
+  box-shadow: 0 2px 60px 12px #4d098e39, 0 2px 12px #00000030;
+  position: relative;
+  min-height: 720px;
+  filter: drop-shadow(0 2px 13px #7f00ff77);
+}
+
+.hangman-dark h2 {
+  font-family: 'Audiowide', 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(90deg, #ffe300, #fd1d1d, #00ffd5 86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.1rem;
+  letter-spacing: 1.8px;
+  filter: drop-shadow(0 2px 7px #19006a90);
+  margin-bottom: 30px;
+}
+
+.hangman-dark h3 {
+  color: #f857a6;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+/* ----- Topic Selector ----- */
+.actor-selector {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+.actor-selector button {
+  background: linear-gradient(90deg, #6b04e0, #fd1d1d 70%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 32px;
+  cursor: pointer;
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.22s, box-shadow 0.16s;
+  box-shadow: 0 0 14px 3px #d100fd88;
+  margin: 5px 0;
+}
+.actor-selector button:hover {
+  background: linear-gradient(90deg, #fd1d1d, #ffe300 95%);
+  color: #19005f;
+  box-shadow: 0 0 18px 7px #ffe30088;
+}
+
+/* ----- Topic display ----- */
+.hangman-topic {
+  font-size: 1.15rem;
+  padding: 10px 18px;
+  margin: 10px auto 0 auto;
+  background: linear-gradient(80deg, #0d033c 25%, #47005260 100%);
+  color: #e9e1ee;
+  border-radius: 10px;
+  letter-spacing: 1.5px;
+  max-width: 340px;
+  display: inline-block;
+  border: 1.2px solid #4907b835;
+  filter: drop-shadow(0 1px 8px #e100ff22);
+}
+
+.hangman-svg {
+  padding: 10px;
+  background: linear-gradient(110deg, #290a47 70%, #181d2e 100%);
+  border-radius: 22px;
+  box-shadow: 0 5px 35px 2px #49249944;
+  width: max-content;
+}
+
+.hangman-word {
+  letter-spacing: 7px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.hangman-word span {
+  background: linear-gradient(90deg, #311059 60%, #08344666 100%);
+  color: #ffe300;
+  border-bottom: 2.5px solid #f857a6;
+  border-radius: 10px 10px 0 0;
+  min-width: 28px;
+  min-height: 32px;
+  font-size: 1.7em;
+  box-shadow: 0 1px 4px #7042f275;
+  margin: 0 4px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.hangman-status {
+  color: #deffed;
+  background: linear-gradient(90deg, #18b8b2, #fcff3c50);
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin: 20px auto 0 auto;
+  display: inline-block;
+  border: 1.3px solid #41ffb655;
+  filter: drop-shadow(0 2px 9px #17002340);
+}
+
+.hangman-alphabet-modern {
+  margin: 35px auto 0 auto;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  user-select: none;
+}
+
+.hangman-keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.hangman-keyboard-row button {
+  background: linear-gradient(90deg,#fd1d1d 20%,#f857a6 90%);
+  color: #e4f9ff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  width: 37px;
+  height: 37px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  box-shadow: 0 1px 14px 2px #ff1d1d22;
+  margin-right: 2px;
+  margin-left: 2px;
+  transition: background 0.17s, box-shadow 0.15s, color 0.16s;
+}
+.hangman-keyboard-row button:disabled {
+  background: linear-gradient(90deg, #35334c 80%, #3c275a);
+  color: #fa73bc;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.61;
+  text-shadow: 0 0 5px #ff60b733;
+}
+.hangman-keyboard-row button:not(:disabled):hover {
+  background: linear-gradient(94deg,#ffe300,#00ffd5 100%);
+  color: #13113a;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow: 0 0 9px 4px #ffe30099, 0 1px 0 #f857a633;
+}
+
+/* ---- Win Overlay / Game Over ---- */
+.hangman-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1c121f80 30%, #511173cc 100%);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.3rem;
+  animation: fadein 0.7s cubic-bezier(.65,.07,.46,.96);
+}
+@keyframes fadein {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+.hangman-result {
+  color: #ffe300;
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f857a6aa, #7a04eb70 70%);
+  padding: 36px 15px 16px 15px;
+  border-radius: 1rem;
+  box-shadow: 0 0 34px #9d00ff34;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 1px 10px #d1a6fa67);
+  text-shadow: 0 1px 8px #421fbb80;
+}
+.hangman-overlay button {
+  background: linear-gradient(90deg, #25dfff, #fd1d1d 80%);
+  color: #1a1934;
+  font-weight: 900;
+  border: none;
+  border-radius: 9px;
+  font-size: 1.28rem;
+  padding: 12px 46px;
+  cursor: pointer;
+  margin: 16px auto 0 auto;
+  box-shadow: 0 2px 22px #f857a654;
+  transition: background 0.18s, color 0.15s;
+}
+.hangman-overlay button:hover {
+  background: linear-gradient(94deg, #ffe300, #00ffd5 80%);
+  color: #fd1d1d;
+  box-shadow: 0 0 10px 2px #ffe300a1;
+}
+
+/* ---- Congrats Banner ---- */
+.hangman-congrats {
+  position: absolute;
+  width: 96%;
+  top: 0;
+  left: 2%;
+  padding: 13px 2px 7px 8px;
+  background: linear-gradient(90deg, #ffee9e, #fd1d1d 80%, #f857a6 100%);
+  color: #51268b;
+  font-weight: 800;
+  font-size: 1.25rem;
+  border-radius: 1.4rem 1.4rem 0 0;
+  letter-spacing: 1.1px;
+  box-shadow: 0 2px 12px #f857a620;
+  z-index: 14;
+  text-shadow: 0 1px 7px #ffc15790;
+  filter: drop-shadow(0 1px 10px #f857a634);
+}
+
+/* ---- Responsive ----- */
+@media (max-width: 700px) {
+  .hangman-dark {
+    min-height: 520px;
+    padding: 18px 4vw 64px 4vw;
+    border-radius: 15px;
+  }
+  .hangman-overlay {
+    border-radius: 15px;
+    font-size: 1rem;
+  }
+  .hangman-result {
+    font-size: .99rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .hangman-dark {
+    padding: 10px 2vw 44px 2vw;
+  }
+  .hangman-word span {
+    min-width: 21px;
+    min-height: 23px;
+    font-size: 1.1em;
+    border-radius: 6px 6px 0 0;
+    letter-spacing: 1px;
+  }
+  .hangman-congrats {
+    padding: 10px 4px 6px 4px;
+    font-size: 1.07rem;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
