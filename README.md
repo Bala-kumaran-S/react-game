@@ -14,13 +14,6 @@ A fun and accessible game for all ages. Match pairs of fruits and vegetables whi
 
 ---
 
-## 🚀 Live Demo
-You can try the project locally by cloning the repository and running it with your favorite development server.
-
-📁 Repository: [https://github.com/Bose-P/react-game](https://github.com/Bose-P/react-game)
-
----
-
 ## 💻 Tech Stack
 
 - HTML
